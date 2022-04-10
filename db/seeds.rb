@@ -92,6 +92,20 @@ User.create! [
     last_name: 'Ackermann',
     age: 22,
     password: 'satthew',
+  },
+  {
+    username: "Yujuice",
+    first_name: 'Albert',
+    last_name: 'Pangilinan',
+    age: 23,
+    password: 'asdf',
+  },
+  {
+    username: "Cat",
+    first_name: 'Liam',
+    last_name: 'Parmar',
+    age: 23,
+    password: 'password',
   }
 ]
 
