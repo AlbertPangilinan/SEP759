@@ -1,0 +1,14 @@
+<div id="<%= dom_id event %>" class="events__event-entry">
+  <div class="events__event-entry__name">
+    <strong>
+      <%= event.name %>
+    </strong>
+  </div>
+  <div class="events__event-entry__venue">
+    Venue:
+    <%= event.venue %>
+  </div>
+  <div class="events__event-entry__location">
+    <%= "#{event.city}, #{event.country}" %>
+  </div>
+</div>

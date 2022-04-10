@@ -1,0 +1,8 @@
+<div class="teams">
+  <h1>Teams</h1>
+  <% @teams.each do |team| %>
+    <%= render("teamlist", team: team) %>
+  <% end %>
+  <%= link_to("Form new team", new_team_path, class: "common__link") if !@current_team_member %>
+</div>
+

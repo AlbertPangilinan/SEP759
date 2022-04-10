@@ -1,0 +1,33 @@
+@import "colors";
+
+.events {
+  text-align: center;
+  margin: 5% auto 0;
+  width: 50%;
+
+  &__event-entry {
+    margin: 8px 0;
+    padding: 16px;
+    background-color: $rl-blue;
+    font-size: 28px;
+
+    &__link {
+      color: $rl-orange;
+    }
+
+    &__name, &__venue, &__location {
+      margin: 8px 0;
+    }
+
+    &__venue, &__location {
+      font-size: 24px;
+    }
+  }
+
+  &__registered {
+    margin: 8px 0;
+    padding: 16px;
+    font-size: 32px;
+    font-weight: bold;
+  }
+}

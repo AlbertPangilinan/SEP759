@@ -1,0 +1,33 @@
+@import "colors";
+
+.login {
+
+  &__image {
+    width: 30%;
+    display: block;
+    margin: 5% auto;
+  }
+
+  &__form {
+    text-align: center;
+
+    &__field {
+      margin: 16px auto;
+
+      &__label {
+        font-size: 32px;
+      }
+
+      &__text {
+        font-size: 24px;
+        margin-top: 16px;
+      }
+    }
+
+    &__submit {
+      font-size: 24px;
+      color: $dark-grey;
+      padding: 8px 16px;
+    }
+  }
+}

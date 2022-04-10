@@ -1,0 +1,81 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+*/
+
+@import "colors";
+
+body {
+  margin: 0;
+  background-color: $dark-grey;
+  color: $white;
+}
+
+.common {
+  &__button {
+    font-size: 16px;
+    color: $dark-grey;
+    padding: 4px 8px;
+    margin-top: 8px;
+
+    &__group {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 16px;
+    }
+
+    &--container {
+      display: inline;
+    }
+  }
+
+  &__link, &__link-divider {
+    font-size: 24px;
+    color: $white;
+    margin: 0 4px;
+  }
+}
+
+.form {
+  &__title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  &__field {
+    margin: 16px auto;
+
+    &__label {
+      font-size: 24px;
+      display: block;
+    }
+
+    &__text, &__dropdown {
+      font-size: 18px;
+      margin-top: 16px;
+    }
+  }
+
+  &__submit {
+    font-size: 20px;
+    color: $dark-grey;
+    padding: 4px 8px;
+    margin-top: 16px;
+  }
+
+  &__errors {
+    color: $alert;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,26 @@
+<div class="teams">
+  <%= render @team %>
+  <div class="teams__region">
+    <%= "Region: #{@region.abbrev}" %>
+  </div>
+  <br/>
+  <div class="teams__roster">
+    Roster:
+  </div>
+  <div class="teams__members">
+    <%= render @team.team_members %>
+  </div>
+  <br/>
+  <%= render("team_members/jointeam", current_user: current_user, team: @team) if !@current_team_member %>
+  <div class="common__button__group">
+    <%= button_to("Edit team info", edit_team_path(@team), method: :get, class: "common__button") if is_part_of_team?(@current_team_member, @team) %>
+    <%= button_to("Disband team", @team, method: :delete, class: "common__button") if is_part_of_team?(@current_team_member, @team) %>
+    <%= button_to("Leave team", {
+      :controller => "team_members",
+      :action => "destroy",
+      :team_id => @team.id,
+      :user_id => @current_team_member.id,
+    }, method: :delete, class: "common__button") if is_part_of_team?(@current_team_member, @team) %>
+  </div>
+  <%= link_to("Back to teams", teams_path, class: "common__link") %>
+</div>

@@ -1,0 +1,30 @@
+<%= form_with(model: team) do |form| %>
+  <% if team.errors.any? %>
+    <div class="form__errors">
+      <div><%= pluralize(team.errors.count, "error") %> prohibited this team from being saved:</div>
+        <% team.errors.each do |error| %>
+          <div><%= error.full_message %></div>
+        <% end %>
+    </div>
+  <% end %>
+  <div class="form__field">
+    <%= form.label(:name, 'Team Name', class: "form__field__label") %>
+    <%= form.text_field(:name, class: "form__field__text") %>
+  </div>
+  <div class="form__field">
+    <%= form.label(:abbrev, 'Tag', class: "form__field__label") %>
+    <%= form.text_field(:abbrev, class: "form__field__text") %>
+  </div>
+  <div class="form__field">
+    <%= form.label(:region, class: "form__field__label") %>
+    <%= form.select(
+      :region_id,
+      @regions.collect { |region| [region.name, region.id] },
+      {},
+      { :class => "form__field__dropdown" },
+    ) %>
+  </div>
+  <div class="form__field">
+    <%= form.submit("Save", class: "form__submit") %>
+  </div>
+<% end %>

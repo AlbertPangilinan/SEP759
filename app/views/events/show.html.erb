@@ -1,0 +1,28 @@
+<div class="events">
+  <%= render @event %>
+  <div class="events__registered">
+    Registered Teams:
+  </div>
+
+  <div id="teams">
+    <% @registered_teams.each do |team| %>
+      <%= render("teams/teamlist", team: team) %>
+    <% end %>
+  </div>
+
+  <div class="common__button__group">
+    <%= button_to("Register for this event", {
+      :controller => "events_teams",
+      :action => "create",
+      :event_id => @event.id,
+      :team_id => @current_team.id,
+    }, method: :post, class: "common__button") if (@current_team && !is_team_registered?(@registered_teams, @current_team)) %>
+    <%= button_to("Cancel registration", {
+      :controller => "events_teams",
+      :action => "destroy",
+      :event_id => @event.id,
+      :team_id => @current_team.id,
+    }, method: :delete, class: "common__button") if (@current_team && is_team_registered?(@registered_teams, @current_team)) %>
+  </div>
+  <%= link_to("Back to events", events_path, class: "common__link") %>
+</div>

@@ -1,0 +1,2 @@
+module EventsTeamsHelper
+end

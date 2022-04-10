@@ -1,0 +1,21 @@
+<div class="login">
+  <%= image_tag("rlesports.png", class: "login__image") %>
+  <div class="login__form">
+    <%= form_with(model: User.new, url: sessions_path) do |form| %>
+      <div class="login__form__field">
+        <%= form.label(:username, class: "login__form__field__label") %>
+        <br/>
+        <%= form.text_field(:username, class: "login__form__field__text") %>
+      </div>
+      <div class="login__form__field">
+        <%= form.label(:password, class: "login__form__field__label") %>
+        <br/>
+        <%= form.password_field(:password, class: "login__form__field__text") %>
+      </div>
+      <br/>
+      <div class="login__form__field">
+        <%= form.submit('Login', class: "login__form__submit") %>
+      </div>
+    <% end %>
+  </div>
+</div>

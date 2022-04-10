@@ -1,0 +1,8 @@
+<div class="teams__members__entry">
+  <span><%= !team_member.player? ? "#{team_member.role.titleize}:" : "" %></span>
+  <strong><%= team_member.ign %></strong>
+  <br/>
+  <span><%= "Country: #{team_member.country}" %></span>
+  <br/>
+  <span><%= !team_member.coach? ? "Control Scheme: #{team_member.control_scheme.titleize}" : "" %></span>
+</div>

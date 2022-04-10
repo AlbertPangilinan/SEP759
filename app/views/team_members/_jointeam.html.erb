@@ -1,0 +1,39 @@
+<div class="teams__join-form">
+  <div class="form__title">
+    Join Team
+  </div>
+  <%= form_for([team, team.team_members.new]) do |form| %>
+    <div class="form__field">
+      <%= form.label(:ign, 'In-Game Name (IGN)', class: "form__field__label") %>
+      <%= form.text_field(:ign, value: current_user.username, class: "form__field__text") %>
+    </div>
+    <div class="form__field">
+      <%= form.label(:country, class: "form__field__label") %>
+      <%= form.text_field(:country, class: "form__field__text") %>
+    </div>
+    <div class="form__field">
+      <%= form.label(:role, class: "form__field__label") %>
+      <%= form.select(
+        :role,
+        options_for_select(TeamMember.roles.map {|key, value| [key.titleize, TeamMember.roles.key(value)]}, TeamMember.roles),
+        {},
+        { :class => "form__field__dropdown" },
+      ) %>
+    </div>
+    <div class="form__field">
+      <%= form.label(:control_scheme, 'Control Scheme', class: "form__field__label") %>
+      <%= form.select(
+        :control_scheme,
+        options_for_select(TeamMember.control_schemes.map {|key, value| [key.titleize, TeamMember.control_schemes.key(value)]}, TeamMember.control_schemes),
+        {},
+        { :class => "form__field__dropdown" },
+      ) %>
+    </div>
+    <div class="form__field">
+      <%= form.hidden_field(:user_id, value: current_user.id) %>
+    </div>
+    <div class="form__field">
+      <%= form.submit("Submit", class: "form__submit")%>
+    </div>
+  <% end %>
+</div>

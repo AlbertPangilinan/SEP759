@@ -1,0 +1,14 @@
+<div class="teams">
+  <div class="teams__edit-form">
+    <div class="form__title">
+      Team Info
+    </div>
+    <%= render "form", team: @team %>
+  </div>
+  <br/>
+  <div>
+    <%= link_to("Show this team", @team, class: "common__link") %>
+    <span class="common__link-divider">|</span>
+    <%= link_to("Back to teams", teams_path, class: "common__link") %>
+  </div>
+</div>

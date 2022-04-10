@@ -1,0 +1,51 @@
+@import "colors";
+
+.teams {
+  text-align: center;
+  margin: 5% auto 0;
+  width: 50%;
+
+  &__team-entry {
+    margin: 8px 0;
+    padding: 16px;
+    background-color: $rl-blue;
+    font-size: 28px;
+
+    &__link {
+      color: $rl-orange;
+    }
+  }
+
+  &__new-team {
+    margin-top: 24px;
+  }
+
+  &__region {
+    margin: 8px 0;
+    padding: 16px;
+    background-color: $rl-blue;
+    font-size: 24px;
+  }
+
+  &__roster {
+    margin: 8px 0;
+    padding: 16px;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  &__members {
+
+    &__entry {
+      margin: 8px 0;
+      padding: 16px;
+      background-color: $rl-orange;
+      font-size: 24px;  
+    }
+  }
+
+  &__join-form, &__edit-form, &__new-form {
+    background-color: $light-grey;
+    padding: 16px;
+  }
+}
