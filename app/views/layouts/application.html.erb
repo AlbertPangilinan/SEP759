@@ -13,7 +13,7 @@
 
   <body>
     <div class="navbar">
-      <% if logged_in? %>
+      <% if user_signed_in? %>
         <div class="navbar__links">
           <%= link_to("Teams", teams_path, class: "navbar__links__link") %>
           <span class="navbar__links__divider">|</span>
@@ -25,10 +25,10 @@
         <div class='<%= key %>'><%= value %></div>
       <% end %>
 
-      <% if logged_in? %>
+      <% if user_signed_in? %>
         <div class="navbar__user">
-          Logged in as <%= current_user.username %>
-          <%= button_to('Logout', logout_path, class: "navbar__user__logout", method: :delete) %>
+          Logged in as <%= current_user.email %>
+          <%= button_to('Logout', destroy_user_session_path, class: "navbar__user__logout", method: :delete) %>
         </div>
       <% end %>
     </div>

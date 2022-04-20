@@ -71,3 +71,6 @@ end
 
 # Fixes logout DELETE route error
 gem 'jquery-rails'
+
+# Devise
+gem 'devise'

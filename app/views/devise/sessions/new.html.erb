@@ -1,0 +1,29 @@
+<div class="auth">
+  <%= image_tag("rlesports.png", class: "auth__image") %>
+  <div class="auth__form">
+    <div class="auth__form__title">Log in</div>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |form| %>
+      <div class="auth__form__field">
+        <%= form.label(:email, class: "auth__form__field__label") %>
+        <br/>
+        <%= form.email_field(:email, class: "auth__form__field__text") %>
+      </div>
+      <div class="auth__form__field">
+        <%= form.label(:password, class: "auth__form__field__label") %>
+        <br/>
+        <%= form.password_field(:password, autocomplete: "current-password", class: "auth__form__field__text") %>
+      </div>
+      <% if devise_mapping.rememberable? %>
+        <div class="auth__form__remember-me">
+          <%= form.check_box :remember_me %>
+          <%= form.label :remember_me %>
+        </div>
+      <% end %>
+      <br/>
+      <div class="auth__form__field">
+        <%= form.submit('Login', class: "auth__form__submit") %>
+      </div>
+    <% end %>
+  </div>
+  <%= render "devise/shared/links" %>
+</div>

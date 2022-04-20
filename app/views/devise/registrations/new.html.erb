@@ -1,0 +1,31 @@
+<div class="auth">
+  <%= image_tag("rlesports.png", class: "auth__image") %>
+  <div class="auth__form">
+    <div class="auth__form__title">Sign up</div>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |form| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="auth__form__field">
+        <%= form.label(:email, class: "auth__form__field__label") %>
+        <br/>
+        <%= form.email_field(:email, autocomplete: "email", class: "auth__form__field__text") %>
+      </div>
+      <div class="auth__form__field">
+        <%= form.label(:password, class: "auth__form__field__label") %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        <br/>
+        <%= form.password_field(:password, autocomplete: "new-password", class: "auth__form__field__text") %>
+      </div>
+      <div class="auth__form__field">
+        <%= form.label(:password_confirmation, class: "auth__form__field__label") %>
+        <br/>
+        <%= form.password_field(:password_confirmation, autocomplete: "new-password", class: "auth__form__field__text") %>
+      </div>
+      <div class="auth__form__field">
+        <%= form.submit('Sign up', class: "auth__form__submit") %>
+      </div>
+    <% end %>
+  </div>
+  <%= render "devise/shared/links" %>
+</div>

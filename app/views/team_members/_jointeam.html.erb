@@ -5,7 +5,7 @@
   <%= form_for([team, team.team_members.new]) do |form| %>
     <div class="form__field">
       <%= form.label(:ign, 'In-Game Name (IGN)', class: "form__field__label") %>
-      <%= form.text_field(:ign, value: current_user.username, class: "form__field__text") %>
+      <%= form.text_field(:ign, class: "form__field__text") %>
     </div>
     <div class="form__field">
       <%= form.label(:country, class: "form__field__label") %>
