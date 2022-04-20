@@ -28,7 +28,7 @@
       <% if user_signed_in? %>
         <div class="navbar__user">
           Logged in as <%= current_user.email %>
-          <%= button_to('Logout', destroy_user_session_path, class: "navbar__user__logout", method: :delete) %>
+          <%= link_to('Logout', destroy_user_session_path, class: "navbar__user__logout", method: :delete) %>
         </div>
       <% end %>
     </div>
