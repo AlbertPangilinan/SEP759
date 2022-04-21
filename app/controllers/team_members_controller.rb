@@ -4,7 +4,7 @@ class TeamMembersController < ApplicationController
   def create
     @team_member = @team.team_members.new(team_member_params)
     if (@team_member.save)
-      puts("Created")
+      TeamMemberMailer.with(user: current_user, team: @team).join_team_email.deliver_now
       redirect_to(@team, notice: "Successfully joined #{@team.name}!")
     else
       puts("Failed")
