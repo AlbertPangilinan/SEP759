@@ -1,5 +1,6 @@
 <div class="teams">
   <%= render @team %>
+  <%= image_tag(@team.image.attached? ? @team.image : "logo.png", class: "teams__logo") %>
   <div class="teams__region">
     <%= "Region: #{@region.abbrev}" %>
   </div>

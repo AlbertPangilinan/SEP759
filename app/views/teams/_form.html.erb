@@ -25,6 +25,10 @@
     ) %>
   </div>
   <div class="form__field">
+    <%= form.label(:image, 'Logo', class: "form__field__label") %>
+    <%= form.file_field(:image, class: "form__field__image") %>
+  </div>
+  <div class="form__field">
     <%= form.submit("Save", class: "form__submit") %>
   </div>
 <% end %>

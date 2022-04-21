@@ -5,6 +5,7 @@ class Team < ApplicationRecord
   belongs_to :region
   has_many :team_members
   has_and_belongs_to_many :events
+  has_one_attached :image, :dependent => :destroy
 
   before_save :capitalize_abbrev
 
