@@ -24,7 +24,7 @@
       <% flash.each do |key, value| %>
         <div class='<%= key %>'><%= value %></div>
       <% end %>
-
+      
       <% if user_signed_in? %>
         <div class="navbar__user">
           Logged in as <%= current_user.email %>

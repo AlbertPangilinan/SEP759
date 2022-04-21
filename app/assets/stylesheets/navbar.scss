@@ -47,3 +47,13 @@
 .alert {
   color: $alert;
 }
+
+.form-errors {
+  width: 50%;
+  margin: auto;
+
+  &__list {
+    width: 50%;
+    margin: auto;
+  }
+}

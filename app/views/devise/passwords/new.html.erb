@@ -1,8 +1,7 @@
 <div class="auth">
-  <%= image_tag("rlesports.png", class: "auth__image") %>
   <div class="auth__form">
     <div class="auth__form__title">Forgot your password?</div>
-      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |form| %>
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }, data: { turbo: false }) do |form| %>
         <%= render "devise/shared/error_messages", resource: resource %>
         <div class="auth__form__field">
           <%= form.label(:email, class: "auth__form__field__label") %>

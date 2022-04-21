@@ -1,4 +1,4 @@
-<%= form_with(model: team) do |form| %>
+<%= form_with(model: team, data: { turbo: false }) do |form| %>
   <% if team.errors.any? %>
     <div class="form__errors">
       <div><%= pluralize(team.errors.count, "error") %> prohibited this team from being saved:</div>

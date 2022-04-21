@@ -2,7 +2,7 @@
   <%= image_tag("rlesports.png", class: "auth__image") %>
   <div class="auth__form">
     <div class="auth__form__title">Log in</div>
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |form| %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |form| %>
       <div class="auth__form__field">
         <%= form.label(:email, class: "auth__form__field__label") %>
         <br/>
