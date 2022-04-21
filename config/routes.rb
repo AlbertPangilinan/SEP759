@@ -14,5 +14,9 @@ Rails.application.routes.draw do
     resources :events
   end
 
+  post '/api-keys', to: 'api_keys#create'
+  delete '/api-keys', to: 'api_keys#destroy'
+  get '/api-keys', to: 'api_keys#index'
+
   root to: 'teams#index'
 end
