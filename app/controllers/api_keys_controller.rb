@@ -21,7 +21,7 @@ class ApiKeysController < ApplicationController
       user = User.find_for_authentication(email: email)
 
       if user.valid_password?(password)
-        api_key = user.api_keys.create! token: SecureRandom.hex 
+        api_key = user.api_keys.create!(token: SecureRandom.hex)
         render(json: api_key, status: :created) and return 
       end 
     end
