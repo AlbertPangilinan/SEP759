@@ -1,24 +1,6 @@
-# README
+# SEP 759 - Final Project (McMaster University)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Rocket League Esports Companion App
 
-Things you may want to cover:
+### Author: Ray Albert Pangilinan
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
