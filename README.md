@@ -1,4 +1,4 @@
-# SEP 759 - Final Project (McMaster University)
+# Prototyping Web and Mobile Applications - McMaster University
 
 ### Rocket League Esports Companion App
 
